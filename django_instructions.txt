@@ -1,0 +1,71 @@
+cd .\dcrm\
+
+python -m venv virt
+
+.\virt\Scripts\activate
+
+pip install django
+
+pip install mysql
+
+pip install mysql-connector   OR    pip install mysql-connector-python
+
+install WorkBench
+
+django-admin startproject dcrm
+
+cd .\dcrm\   # in \dcrm\dcrm
+
+python manage.py startapp website
+
+
+settings.py --> INSTALLED_APPS add 'website'
+DATABASES edit ENGINE: django.db.backends.mysql
+NAME, USERNAME, PASSWORD, HOST, PORT
+
+
+create mydb.py in dir where manage.py is located
+fill the file
+
+python .\mydb.py   # creating db
+
+python .\manage.py migrate   # start app
+
+python .\manage.py createsuperuser
+user - admin
+password - 123456
+# Superuser created successfully.
+
+python .\manage.py runserver
+
+
+#set up a git for the project
+git config --global user.name "Yordan Dimitrov"
+git config --global user.email "jordanfdimitrov@gmail.com"
+git config --global push.default matching
+git config --global alias.co checkout
+git init
+git add .
+git commit -am 'Initial Commit'
+git remote add origin https://github.com/yordanfilipov/Django-CRM.git   # repository name
+git branch -M master   # changes the branch from master to main
+git push -u origin master  # push the changes
+
+
+python .\manage.py runserver
+
+urls.py -->
+from django.urls import path, include  # add include
+path('', include('website.urls')) # add to urlpatterns
+copy the content of urls.py
+create urls.py in website directory
+remove -->  from django.contrib import admin
+remove -->  path('', include('website.urls')),
+edit path('', views.home, name='home')   # creating template file, html page, url, view
+
+edit views.py
+
+home.html, navbar.html, base.html ....
+edit hrefs, edit base.html to load the other pages
+
+views.py import authentication system ...
