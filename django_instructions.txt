@@ -51,6 +51,11 @@ git remote add origin https://github.com/yordanfilipov/Django-CRM.git   # reposi
 git branch -M master   # changes the branch from master to main
 git push -u origin master  # push the changes
 
+WHEN wanna commit new changes
+git add .
+git commit -am 'another commit'
+git push
+
 
 python .\manage.py runserver
 
@@ -69,3 +74,22 @@ home.html, navbar.html, base.html ....
 edit hrefs, edit base.html to load the other pages
 
 views.py import authentication system ...
+
+
+# making html pages in website/templates --> home, register, navbar, base ...
+# add html pages in urls.py
+# add html pages in vies.py (make functions separately)
+
+# 3-way process ------> URL, PAGE, VIEW <-------
+
+# setting up database
+
+add fields to models.py
+
+# migrate --> pushing things to the DB
+
+python .\manage.py makemigrations
+
+python .\manage.py migrate
+
+admin.py --> import Record --> showing in admin panel
