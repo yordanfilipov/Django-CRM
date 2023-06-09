@@ -40,14 +40,14 @@ python .\manage.py runserver
 
 
 #set up a git for the project
-git config --global user.name "Yordan Dimitrov"
-git config --global user.email "jordanfdimitrov@gmail.com"
+git config --global user.name "Your Name"
+git config --global user.email "your_email@gmail.com"
 git config --global push.default matching
 git config --global alias.co checkout
 git init
 git add .
 git commit -am 'Initial Commit'
-git remote add origin https://github.com/yordanfilipov/Django-CRM.git   # repository name
+git remote add origin repository_name_from_github  # repository name
 git branch -M master   # changes the branch from master to main
 git push -u origin master  # push the changes
 
@@ -80,7 +80,7 @@ views.py import authentication system ...
 # add html pages in urls.py
 # add html pages in vies.py (make functions separately)
 
-# 3-way process ------> URL, PAGE, VIEW <-------
+# 3-step process ------> URL, VIEW, PAGE <-------
 
 # setting up database
 
